@@ -6,29 +6,37 @@
 # Sentiment Analysis API
 
 Проект является Fork продолжением репозитория великого человека: https://github.com/dsemihin/SE_FastAPI_Example
-Представляет собой сервис для анализа текста. На текущий момент содержит только backend FastAPI часть.
+Представляет собой сервис для анализа английского текста. На текущий момент содержит backend на FastAPI и frontend на Streamlit.
 
 ## Фичи
 
 - Проверка работоспособности сервиса (health check)
 - `GET`-запрос на анализ семантики текста
 - `POST`-запрос на анализ семантики текста
+- Streamlit UI для ручного тестирования API с историей запросов
 
 ## Структура проекта
 
-- `main.py` - FastAPI application entry point
+- `main.py` - FastAPI приложения
+- `streamlit_app.py` - Streamlit UI для работы с API через браузер
 
-## Установка зависимостей 
+## Установка зависимостей
 
-Мне если что лень делать requirements.txt я не буду нет не просите
+Мне если что лень делать requirements.txt, я не буду, нет не просите
 ```bash
-pip install fastapi uvicorn transformers torch pydantic
+pip install fastapi uvicorn transformers torch pydantic streamlit requests
 ```
 
 ## Запуск Backend-а
 
 ```bash
 python -m uvicorn main:app --host 127.0.0.1 --port 8000
+```
+
+## Запуск Frontend-а
+
+```bash
+python -m streamlit run streamlit_app.py --server.headless true --server.address 127.0.0.1 --server.port 8501
 ```
 
 ## API
