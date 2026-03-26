@@ -1,11 +1,15 @@
-## Участники
+# Участники
+
 Киреева Анастасия Игоревна - knjknj5625
+
 Тихомиров Алексей Константинович - bultaming
 
+----------------------------
 
 # Sentiment Analysis API
 
 Проект является Fork продолжением репозитория великого человека: https://github.com/dsemihin/SE_FastAPI_Example
+
 Представляет собой сервис для анализа английского текста. На текущий момент содержит backend на FastAPI и frontend на Streamlit.
 
 ## Фичи
@@ -23,6 +27,7 @@
 ## Установка зависимостей
 
 Мне если что лень делать requirements.txt, я не буду, нет не просите
+
 ```bash
 pip install fastapi uvicorn transformers torch pydantic streamlit requests
 ```
