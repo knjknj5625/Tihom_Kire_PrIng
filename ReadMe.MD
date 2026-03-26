@@ -1,11 +1,15 @@
-## Участники
+# Участники
+
 Киреева Анастасия Игоревна - knjknj5625
+
 Тихомиров Алексей Константинович - bultaming
 
+----------------------------
 
 # Sentiment Analysis API
 
 Проект является Fork продолжением репозитория великого человека: https://github.com/dsemihin/SE_FastAPI_Example
+
 Представляет собой сервис для анализа английского текста. На текущий момент содержит backend на FastAPI и frontend на Streamlit.
 
 ## Фичи
@@ -23,20 +27,43 @@
 ## Установка зависимостей
 
 Мне если что лень делать requirements.txt, я не буду, нет не просите
+
 ```bash
 pip install fastapi uvicorn transformers torch pydantic streamlit requests
 ```
 
 ## Запуск Backend-а
 
+Обычный запуск:
+
 ```bash
 python -m uvicorn main:app --host 127.0.0.1 --port 8000
 ```
 
+Запустить бэкенд с логами:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\start_fastapi.ps1
+```
+
 ## Запуск Frontend-а
+
+Обычный запуск:
 
 ```bash
 python -m streamlit run streamlit_app.py --server.headless true --server.address 127.0.0.1 --server.port 8501
+```
+
+Запустить фронтенд с логами:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\start_streamlit.ps1
+```
+
+Запустить всё:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\start_all.ps1
 ```
 
 ## API
